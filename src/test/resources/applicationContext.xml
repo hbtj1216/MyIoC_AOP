@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+
+    <bean id="firstBean" class="com.tao.FirstBean">
+        <property name="secondBean" ref="secondBean"/>
+    </bean>
+
+    <bean id="secondBean" class="com.tao.SecondBean"/>
+
+</beans>

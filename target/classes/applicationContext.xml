@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans >
+    <bean id="student1" class="com.tao.ioc_aop.model.Student">
+        <constructor-arg type="java.lang.String" value="小明"/>
+        <constructor-arg type="int" value="25"/>
+        <constructor-arg type="float" value="98.5"/>
+        <constructor-arg type="com.tao.ioc_aop.model.Classroom" ref="classroom1"/>
+    </bean>
+
+
+    <bean id="student2" class="com.tao.ioc_aop.model.Student">
+        <property name="name" value="小张"/>
+        <property name="age" value="23"/>
+        <property name="score" value="90.3"/>
+        <property name="classroom" ref="classroom1"/>
+    </bean>
+
+    <bean id="student3" class="com.tao.ioc_aop.model.Student">
+        <constructor-arg type="java.lang.String" value="小白"/>
+        <constructor-arg type="int" value="24"/>
+        <constructor-arg type="float" value="94.8"/>
+        <constructor-arg type="com.tao.ioc_aop.model.Classroom" ref="classroom2"/>
+    </bean>-->
+
+
+    <bean id="classroom1" class="com.tao.ioc_aop.model.Classroom">
+        <constructor-arg type="java.lang.String" value="高三一班"/>
+    </bean>
+
+
+    <bean id="classroom2" class="com.tao.ioc_aop.model.Classroom">
+        <property name="classroomName" value="高三二班"/>
+    </bean>
+
+
+    <!-- aop -->
+
+    <bean id = "jdbcService" class="com.tao.ioc_aop.model.Service">
+        <property name="serviceName" value="数据库服务"/>
+    </bean>
+
+
+    <bean id = "transactionAspect" class="com.tao.ioc_aop.model.TransactionAspect">
+    </bean>
+
+</beans>
